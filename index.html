@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Athlete Nutrition</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('Football1.jpg');
+            background-size: cover;
+            background-position: center;
+            scroll-behavior: smooth;
+            margin: 0;
+        }
+
+        header {
+            background: #11b9c8;
+            color: #ffffff;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: box-shadow 0.3s ease;
+        }
+
+        header.scrolled {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            list-style: none;
+            padding: 10px 0;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #333;
+        }
+
+        section {
+            padding: 40px;
+            margin: 20px auto;
+            max-width: 1200px;
+            background-color: rgba(255, 255, 255, 0.95);
+            color: #333;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: #000;
+            border-bottom: 2px solid #35424a;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+
+        .nutrition-tips {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .tip {
+            background-color: #4CAF50;
+            color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .tip:hover {
+            transform: translateY(-5px);
+            background-color: #45a049;
+        }
+
+
+
+        p {
+             margin-bottom: 1em; /* Adds space between paragraphs */
+        }
+
+
+        button {
+            padding: 12px 24px;
+            margin: 10px 0;
+            background: #4CAF50;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        button:hover {
+            background: #45a049;
+            transform: translateY(-3px);
+        }
+
+        img {
+            display: none;
+            width: 100%;
+            max-width: 500px;
+            margin: 20px auto;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .meal-info {
+            display: none;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 15px;
+            opacity: 0;
+            transition: opacity 0.5s ease, transform 0.3s ease;
+            transform: translateY(10px);
+        }
+
+        .meal-info.show {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nutrition-tips {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1>Athlete Nutrition</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#nutrition-tips">Nutrition Tips</a></li>
+                <li><a href="#meal-plans">Meal Plans</a></li>
+                <li><a href="#game-performance">Game Performance</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Athlete Nutrition</h2>
+        <p><b>Why is Athlete Nutrition Important?</b></p>
+        <p>Athlete nutrition is the science of fueling an athlete's body to optimize performance, recovery, and overall health. It involves tailoring dietary intake to support the unique physical demands of different sports, training intensities, and individual body needs. Key aspects of athlete nutrition include:</p>
+        <b>1. Macronutrients</b>
+        <li>Carbohydrates provide quick energy, especially for high-intensity workouts. Athletes often need higher carbohydrate intake to fuel their muscles.</li>
+        <li>Proteins are essential for muscle repair and growth. High-protein foods support recovery after exercise, helping repair tissues stressed during training.</li>    
+        <li>Fats offer a slower, more sustained energy source, particularly important for endurance sports and prolonged activities</li> 
+        <br>
+        <b>2. Micronutrients</b>
+        <li><b>Vitamins and Minerals</b></li>
+        <li>Vital for energy production, bone health, immune function, and recovery.</li>
+    </section>
+
+    <section id="nutrition-tips">
+        <h2>Nutrition Tips</h2>
+        <div class="nutrition-tips">
+            <div class="tip"><b>Performance Optimization:</b> Athletes have unique dietary needs. Include complex carbs like quinoa or oats to fuel prolonged activity. Use natural performance enhancers like beetroot juice to improve stamina.</div>
+            <div class="tip"><b>Injury Prevention:</b> A nutrient-rich diet supports the immune system. Add omega-3 fatty acids from sources like flaxseeds and walnuts for anti-inflammatory benefits. Ensure adequate vitamin D and calcium intake for bone health.</div>
+            <div class="tip"><b>Long-term Health:</b> Athletes need to maintain their health and well-being. Incorporate antioxidant-rich foods such as berries, turmeric, and green tea to combat oxidative stress. Rotate protein sources like legumes, dairy, and tofu to diversify nutrient intake.</div>
+            <div class="tip"><b>Adaptation to Training:</b> Nutrition plays a key role in how the body adapts to training. Consume protein evenly across meals for better muscle protein synthesis. Time post-training nutrition to include carbs and protein in a 3:1 ratio for optimal recovery.</div>
+
+        </div>
+    </section>
+
+    <section id="meal-plans">
+        <h2>Sample Meal Plans</h2>
+        <p>Below are examples of vegetarian, Jain, and non-vegetarian meal plans tailored for athletes.</p>
+
+        <button onclick="toggleDisplay('JainImage', 'JainInfo')">Show Meal Plan (Jain)</button>
+        <img id="JainImage" src="DietPlan3(Jain).jpg" alt="Jain Meal Plan">
+        <div id="JainInfo" class="meal-info"><h3>Jain Meal Plan Details:</h3><p>This Jain meal plan is specially designed for footballers following Jain dietary restrictions, focusing on plant-based foods that exclude root vegetables and incorporate fresh, seasonal ingredients. It ensures a balanced intake of carbohydrates, proteins, and healthy fats, providing optimal energy, muscle recovery, and overall health, while respecting the religious principles of non-violence and simplicity in food preparation.</p></div>
+
+        <button onclick="toggleDisplay('jainMealPlan2Image', 'jainMealPlan2Info')">Show 2nd Meal Plan (Jain)</button>
+        <img id="jainMealPlan2Image" src="DietPlan(Jain2).png" Jain Meal Plan 2">
+        <div id="jainMealPlan2Info" class="meal-info"><h3>Jain Meal Plan 2 Details:</h3><p>This Jain meal plan is specially designed for footballers following Jain dietary restrictions, focusing on plant-based foods that exclude root vegetables and incorporate fresh, seasonal ingredients. It ensures a balanced intake of carbohydrates, proteins, and healthy fats, providing optimal energy, muscle recovery, and overall health, while respecting the religious principles of non-violence and simplicity in food preparation.</p></div>
+        
+        <button onclick="toggleDisplay('vegImage', 'vegInfo')">Show Meal Plan (Vegetarian)</button>
+        <img id="vegImage" src="DietPlan2(VEG).jpg" alt="Vegetarian Meal Plan">
+        <div id="vegInfo" class="meal-info"><h3>Vegetarian Meal Plan Details:</h3><p>This vegetarian meal plan is designed for footballers who follow a plant-based diet, ensuring they get the right balance of carbohydrates, proteins, and fats for energy, muscle repair, and overall well-being. It includes whole grains, legumes, vegetables, and plant-based proteins, meeting the nutritional needs of athletes while respecting dietary preferences or religious restrictions.</p></div>
+        
+        <button onclick="toggleDisplay('vegMealPlan2Image', 'vegMealPlan2Info')">Show 2nd Meal Plan (Vegetarian) </button>
+        <img id="vegMealPlan2Image" src="DietPlan(Veg2).png" alt="Veg Meal Plan 2">
+        <div id="vegMealPlan2Info" class="meal-info"><h3>Veg Meal Plan 2 Details:</h3><p>This vegetarian meal plan is designed for footballers who follow a plant-based diet, ensuring they get the right balance of carbohydrates, proteins, and fats for energy, muscle repair, and overall well-being. It includes whole grains, legumes, vegetables, and plant-based proteins, meeting the nutritional needs of athletes while respecting dietary preferences or religious restrictions.</p></div>
+        
+        <button onclick="toggleDisplay('nonVegImage', 'nonVegInfo')">Show Meal Plan (Non-Vegetarian)</button>
+        <img id="nonVegImage" src="DietPlan1(Non-Veg) 2.jpg" alt="Non-Vegetarian Meal Plan">
+        <div id="nonVegInfo" class="meal-info"><h3>Non-Vegetarian Meal Plan Details:</h3><p>This non-vegetarian meal plan is tailored for footballers who consume animal products, providing lean proteins, healthy fats, and carbohydrates essential for performance and recovery. It incorporates high-quality proteins from lean meats, fish, and eggs, alongside complex carbs and micronutrients to fuel training and enhance muscle repair.</p></div>
+
+        <button onclick="toggleDisplay('nonVegMealPlan2Image', 'nonVegMealPlan2Info')">Show 2nd Meal Plan (Non-Vegetarian) </button>
+        <img id="nonVegMealPlan2Image" src="DietPlan(NonVeg2).png" Non Veg Meal Plan 2">
+        <div id="nonVegMealPlan2Info" class="meal-info"><h3>Non Veg Meal Plan 2 Details:</h3><p>This non-vegetarian meal plan is tailored for footballers who consume animal products, providing lean proteins, healthy fats, and carbohydrates essential for performance and recovery. It incorporates high-quality proteins from lean meats, fish, and eggs, alongside complex carbs and micronutrients to fuel training and enhance muscle repair.</p></div>
+
+    
+    </section>
+
+    <section id="game-performance">
+        <h2>Boosting Game Performance Through Nutrition</h2>
+        <ul>
+            <p><b>Performance Optimization:</b> Athletes have unique dietary needs. Include complex carbs like quinoa or oats to fuel prolonged activity. Use natural performance enhancers like beetroot juice to improve stamina.</p>
+            <p><b>Boosting Game Performance:</b> Want to dominate on the field? Start by fueling your body right! Pre-game meals packed with complex carbohydrates like pasta, brown rice, or sweet potatoes are your secret weapon for sustained energy. Stay ahead of the game by hydrating consistently throughout the day and sipping on electrolyte-rich drinks to fend off cramps and fatigue. Craving a quick boost? Grab a banana or an energy bar 30 minutes before kickoff to power up without discomfort. Don’t forget the magic of nitrates—foods like beetroot supercharge oxygen flow, giving you the stamina to outlast and outperform. Fuel up, show up, and own the game!</p>
+            <p><b>Injury Prevention:</b> A nutrient-rich diet supports the immune system. Add omega-3 fatty acids from sources like flaxseeds and walnuts for anti-inflammatory benefits. Ensure adequate vitamin D and calcium intake for bone health.</p>
+            <p><b>Long-term Health:</b> Athletes need to maintain their health and well-being. Incorporate antioxidant-rich foods such as berries, turmeric, and green tea to combat oxidative stress. Rotate protein sources like legumes, dairy, and tofu to diversify nutrient intake.</p>
+            <p><b>Adaptation to Training:</b> Nutrition plays a key role in how the body adapts to training. Consume protein evenly across meals for better muscle protein synthesis. Time post-training nutrition to include carbs and protein in a 3:1 ratio for optimal recovery.</p>
+
+        </ul>
+    </section>
+
+    <script>
+        // Add shadow to header on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Toggle meal plan images and info
+        function toggleDisplay(imageId, infoId) {
+            const image = document.getElementById(imageId);
+            const info = document.getElementById(infoId);
+            image.style.display = image.style.display === 'block' ? 'none' : 'block';
+            image.style.opacity = image.style.opacity === '1' ? '0' : '1';
+            info.classList.toggle('show');
+        }
+
+
+    </script>
+</body>
+</html>

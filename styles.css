@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f3f3f3;
+}
+
+header {
+  background-color: #005f99;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section {
+  margin: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#about .content-box {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#about h2, #nutrition-tips h2, #meal-plans h2 {
+  margin-bottom: 20px;
+}
+
+#about h3 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#nutrition-tips .tips-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.tip {
+  background-color: #4CAF50;
+  color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 14px;
+}
+
+#meal-plans .buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+#meal-plans button {
+  background-color: #4CAF50;
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#meal-plans button:hover {
+  background-color: #45a049;
+}
