@@ -14,7 +14,7 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            color: #333;
+            color: #f1f1f1;
             background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('Football1.jpg');
             background-size: cover;
             background-position: center;
@@ -23,7 +23,7 @@
         }
 
         header {
-            background: #11b9c8;
+            background: #001F3D; /* Updated */
             color: #ffffff;
             padding: 15px;
             text-align: center;
@@ -54,15 +54,15 @@
         }
 
         nav ul li a:hover {
-            color: #333;
+            color: #8f9ba8; /* Updated */
         }
 
         section {
             padding: 40px;
             margin: 20px auto;
             max-width: 1200px;
-            background-color: rgba(255, 255, 255, 0.95);
-            color: #333;
+            background-color: rgba(16, 24, 32, 0.95); /* Updated */
+            color: #ffffff;
             border-radius: 8px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
@@ -74,8 +74,8 @@
 
         h2 {
             font-size: 1.8em;
-            color: #000;
-            border-bottom: 2px solid #35424a;
+            color: #ffffff;
+            border-bottom: 2px solid #8f9ba8; /* Updated */
             padding-bottom: 5px;
             margin-bottom: 20px;
         }
@@ -100,17 +100,14 @@
             background-color: #45a049;
         }
 
-
-
         p {
-             margin-bottom: 1em; /* Adds space between paragraphs */
+            margin-bottom: 1em;
         }
-
 
         button {
             padding: 12px 24px;
             margin: 10px 0;
-            background: #4CAF50;
+            background: #0d3dd8;
             color: #ffffff;
             border: none;
             border-radius: 5px;
@@ -136,7 +133,7 @@
 
         .meal-info {
             display: none;
-            background-color: #f9f9f9;
+            background-color: #2d3e50; /* Updated */
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -151,8 +148,6 @@
             opacity: 1;
             transform: translateY(0);
         }
-        
-
 
         /* Responsive Design */
         @media (max-width: 768px) {
@@ -183,6 +178,7 @@
         <li>Carbohydrates provide quick energy, especially for high-intensity workouts. Athletes often need higher carbohydrate intake to fuel their muscles.</li>
         <li>Proteins are essential for muscle repair and growth. High-protein foods support recovery after exercise, helping repair tissues stressed during training.</li>    
         <li>Fats offer a slower, more sustained energy source, particularly important for endurance sports and prolonged activities</li> 
+        <img src="what-are-macronutrients-s.jpg">
         <br>
         <b>2. Micronutrients</b>
         <li><b>Vitamins and Minerals</b></li>
@@ -196,10 +192,22 @@
             <div class="tip"><b>Injury Prevention:</b> A nutrient-rich diet supports the immune system. Add omega-3 fatty acids from sources like flaxseeds and walnuts for anti-inflammatory benefits. Ensure adequate vitamin D and calcium intake for bone health.</div>
             <div class="tip"><b>Long-term Health:</b> Athletes need to maintain their health and well-being. Incorporate antioxidant-rich foods such as berries, turmeric, and green tea to combat oxidative stress. Rotate protein sources like legumes, dairy, and tofu to diversify nutrient intake.</div>
             <div class="tip"><b>Adaptation to Training:</b> Nutrition plays a key role in how the body adapts to training. Consume protein evenly across meals for better muscle protein synthesis. Time post-training nutrition to include carbs and protein in a 3:1 ratio for optimal recovery.</div>
-
         </div>
     </section>
 
+    <section>
+        <div class="bmi-calculator" style="margin: 20px;">
+            <h2>BMI Calculator</h2>
+            <label for="weight">Weight (kg): </label>
+            <input type="number" id="weight" placeholder="Enter your weight" required><br><br>
+            <label for="height">Height (m): </label>
+            <input type="number" id="height" placeholder="Enter your height" step="0.01" required><br><br>
+            <button onclick="calculateBMI()">Calculate BMI</button>
+            <p id="bmi-result" style="margin-top: 10px;"></p>
+        </div>
+    </section>
+
+    
     <section id="meal-plans">
         <h2>Sample Meal Plans</h2>
         <p>Below are examples of vegetarian, Jain, and non-vegetarian meal plans tailored for athletes.</p>
@@ -232,38 +240,39 @@
     </section>
 
     <section id="game-performance">
-        <h2>Boosting Game Performance Through Nutrition</h2>
-        <ul>
-            <p><b>Performance Optimization:</b> Athletes have unique dietary needs. Include complex carbs like quinoa or oats to fuel prolonged activity. Use natural performance enhancers like beetroot juice to improve stamina.</p>
-            <p><b>Boosting Game Performance:</b> Want to dominate on the field? Start by fueling your body right! Pre-game meals packed with complex carbohydrates like pasta, brown rice, or sweet potatoes are your secret weapon for sustained energy. Stay ahead of the game by hydrating consistently throughout the day and sipping on electrolyte-rich drinks to fend off cramps and fatigue. Craving a quick boost? Grab a banana or an energy bar 30 minutes before kickoff to power up without discomfort. Don’t forget the magic of nitrates—foods like beetroot supercharge oxygen flow, giving you the stamina to outlast and outperform. Fuel up, show up, and own the game!</p>
-            <p><b>Injury Prevention:</b> A nutrient-rich diet supports the immune system. Add omega-3 fatty acids from sources like flaxseeds and walnuts for anti-inflammatory benefits. Ensure adequate vitamin D and calcium intake for bone health.</p>
-            <p><b>Long-term Health:</b> Athletes need to maintain their health and well-being. Incorporate antioxidant-rich foods such as berries, turmeric, and green tea to combat oxidative stress. Rotate protein sources like legumes, dairy, and tofu to diversify nutrient intake.</p>
-            <p><b>Adaptation to Training:</b> Nutrition plays a key role in how the body adapts to training. Consume protein evenly across meals for better muscle protein synthesis. Time post-training nutrition to include carbs and protein in a 3:1 ratio for optimal recovery.</p>
-
-        </ul>
+        <h2>Game Performance</h2>
+        <p>Athletes' performance in games can be significantly influenced by the type of nutrition they consume. For high-intensity sports, quick energy sources like fruits or sports drinks are key. For endurance sports, complex carbs like rice and pasta should be prioritized.</p>
     </section>
 
     <script>
-        // Add shadow to header on scroll
-        window.addEventListener('scroll', () => {
-            const header = document.getElementById('header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-
-        // Toggle meal plan images and info
-        function toggleDisplay(imageId, infoId) {
-            const image = document.getElementById(imageId);
-            const info = document.getElementById(infoId);
-            image.style.display = image.style.display === 'block' ? 'none' : 'block';
-            image.style.opacity = image.style.opacity === '1' ? '0' : '1';
-            info.classList.toggle('show');
+        function calculateBMI() {
+            var weight = document.getElementById('weight').value;
+            var height = document.getElementById('height').value;
+            var bmi = (weight / (height * height)).toFixed(2);
+            document.getElementById('bmi-result').textContent = "Your BMI is: " + bmi;
         }
 
+        function toggleDisplay(imageId, infoId) {
+            var image = document.getElementById(imageId);
+            var info = document.getElementById(infoId);
 
+            if (image.style.display === "none") {
+                image.style.display = "block";
+                info.style.display = "block";
+            } else {
+                image.style.display = "none";
+                info.style.display = "none";
+            }
+        }
+
+        window.onscroll = function() {
+            var header = document.getElementById("header");
+            if (window.scrollY > 50) {
+                header.classList.add("scrolled");
+            } else {
+                header.classList.remove("scrolled");
+            }
+        };
     </script>
 </body>
 </html>
