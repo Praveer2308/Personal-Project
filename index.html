@@ -24,7 +24,7 @@
 
         header {
             background: #001F3D; /* Updated */
-            color: #ffffff;
+            color: #EAD8B1;
             padding: 15px;
             text-align: center;
             position: sticky;
@@ -43,10 +43,11 @@
             gap: 20px;
             list-style: none;
             padding: 10px 0;
+            color: #EAD8B1;
         }
 
         nav ul li a {
-            color: #ffffff;
+            color: #EAD8B1;
             text-decoration: none;
             font-weight: 600;
             font-size: 1.1em;
@@ -54,7 +55,7 @@
         }
 
         nav ul li a:hover {
-            color: #8f9ba8; /* Updated */
+            color: #ffffff; /* Updated */
         }
 
         section {
@@ -166,6 +167,7 @@
                 <li><a href="#nutrition-tips">Nutrition Tips</a></li>
                 <li><a href="#meal-plans">Meal Plans</a></li>
                 <li><a href="#game-performance">Game Performance</a></li>
+                <li><a href="#The Bidirectional Link Between Food and the Mind">Relation between Food and Mind</a></li>
             </ul>
         </nav>
     </header>
@@ -181,8 +183,8 @@
         <img src="what-are-macronutrients-s.jpg">
         <br>
         <b>2. Micronutrients</b>
-        <li>Micronutrients are essential nutrients required in small amounts for the body to function properly. They include vitamins (e.g., Vitamin A, B-complex, C, D, E, and K) and minerals (e.g., calcium, iron, magnesium, zinc). Vitamins help with metabolism, immune function, and bone health, while minerals are crucial for bone formation, nerve function, and energy metabolism.</li>
-        <li>Micronutrients are found in foods like fruits, vegetables, whole grains, nuts, seeds, and animal products. A deficiency in micronutrients can lead to health issues, while excessive intake can cause toxicity. A balanced diet ensures adequate micronutrient intake for overall health.</li>
+        <li><b>Vitamins and Minerals</b></li>
+        <li>Vital for energy production, bone health, immune function, and recovery.</li>
     </section>
 
     <section id="nutrition-tips">
@@ -195,18 +197,19 @@
         </div>
     </section>
 
-    <section>
-        <div class="bmi-calculator" style="margin: 20px;">
+    <section id="bmi-calculator">
             <h2>BMI Calculator</h2>
-            <label for="weight">Weight (kg): </label>
-            <input type="number" id="weight" placeholder="Enter your weight" required><br><br>
-            <label for="height">Height (m): </label>
-            <input type="number" id="height" placeholder="Enter your height" step="0.01" required><br><br>
-            <button onclick="calculateBMI()">Calculate BMI</button>
-            <p id="bmi-result" style="margin-top: 10px;"></p>
-        </div>
+            <div class="bmi-container">
+                <label for="weight">Weight (kg): </label>
+                <input type="number" id="weight" placeholder="Enter your weight"><br><br>
+                <label for="height">Height (m): </label>
+                <input type="number" id="height" placeholder="Enter your height" step="0.01"><br><br>
+                <button onclick="calculateBMI()">Calculate BMI</button>
+                <p id="bmi-result"></p>
+            </div>
     </section>
-
+                
+    </section>
     
     <section id="meal-plans">
         <h2>Sample Meal Plans</h2>
@@ -236,43 +239,63 @@
         <img id="nonVegMealPlan2Image" src="DietPlan(NonVeg2).png" Non Veg Meal Plan 2">
         <div id="nonVegMealPlan2Info" class="meal-info"><h3>Non Veg Meal Plan 2 Details:</h3><p>This non-vegetarian meal plan is tailored for footballers who consume animal products, providing lean proteins, healthy fats, and carbohydrates essential for performance and recovery. It incorporates high-quality proteins from lean meats, fish, and eggs, alongside complex carbs and micronutrients to fuel training and enhance muscle repair.</p></div>
 
+    </section>
+
+
+    <section id="game-performance">
+        <h2>The Role of Nutrition in Athletic Performance</h2>
+        <p>All people should care about nutrition, but sports participation places unique demands on the body. This means that nutrition can help (or hinder) athletes in different ways:</p>
+        <li><b>Nutrition provides the body with energy.</b> Athletes burn through their energy stores faster than an average person, especially during a competition, so their energy demands are higher. Burning more calories than you consume can not only affect sports performance, but can also lead to health issues such as fatigue and increased risk of stress fractures. When an athlete does not get enough energy from food relative to the amount of energy they are burning, it is called relative energy deficiency in sports (REDs). The key sources of energy in the foods we eat are carbohydrates, fats and proteins, and it’s crucial for athletes to consume these in a balanced way.</li>
+        <br>
+        <li><b>Nutrition helps the Body heal.</b> Exercise is meant to cause micro-damage to the muscles by challenging them to handle more weight or resistance, and competition is often more intense than a regular workout. The good news is that muscles rebuild themselves bigger and stronger. It is also important to note that protein is rarely used as an energy source; rather, protein plays a major role in helping the muscles and other tissues recover. However, too much protein can increase the risk of dehydration and calcium loss.</li>
+        <br>
+        <li><b>Fluids regulate hydration and body temperature.</b> Fluids are part of nutrition, too! Getting enough water is especially important for athletes, who tend to lose fluids faster than an average person due to increased sweating, especially when padding and extra sport gear are worn in sports like football and lacrosse. Plus, many competitions are outdoors, and hydration is crucial when competing on a hot day.</li>
+        <br>
+        <li><b>Nutrition affects body weight.</b> Weight is important in certain sports such as wrestling, where it determines in which group an athlete competes. Many athletes feel pressure to meet specific weight goals. Working with a dietitian can help make sure your health and performance don’t suffer in your efforts to control weight.</li>
+        <br>
+        <li><b>Nutrition is important for overall health.</b> When the body has all the nutrients it needs, it means you can function at your best both mentally and physically. Nutrition also helps support your immune system, helping you have fewer sick days.</li>
     
     </section>
 
-    <section id="game-performance">
-        <h2>Game Performance</h2>
-        <p>Athletes' performance in games can be significantly influenced by the type of nutrition they consume. For high-intensity sports, quick energy sources like fruits or sports drinks are key. For endurance sports, complex carbs like rice and pasta should be prioritized.</p>
-    </section>
-
-    <script>
-        function calculateBMI() {
-            var weight = document.getElementById('weight').value;
-            var height = document.getElementById('height').value;
-            var bmi = (weight / (height * height)).toFixed(2);
-            document.getElementById('bmi-result').textContent = "Your BMI is: " + bmi;
-        }
-
-        function toggleDisplay(imageId, infoId) {
-            var image = document.getElementById(imageId);
-            var info = document.getElementById(infoId);
-
-            if (image.style.display === "none") {
-                image.style.display = "block";
-                info.style.display = "block";
-            } else {
-                image.style.display = "none";
-                info.style.display = "none";
+    <section id="The Bidirectional Link Between Food and the Mind">
+        <h2>Nutrition Boosting Game Performance</h2>    
+        <li>As humans, our relationship to food is complex. Food can be nourishing, enjoyable, social, and soothing. For this reason, there is a bidirectional relationship between diet and mental health. This means that mood can influence eating habits, and in turn, eating can impact mood and psychological well-being.</li>
+        <br>
+        <li>When you’re not getting proper nutrition, you might feel very stressed in an otherwise mildly stressful situation. As a result, you may turn to less healthy foods for comfort or as a time saver to mediate the feelings.</li>
+        <br>
+        <li>Because this food is less healthy, it further reduces your ability to adapt to stress. This can create a vicious cycle of eating foods that can worsen anxious feelings.</li>
+        <br>
+        <li>A similar cycle can happen with depression. You may feel depressed and low energy, so you turn to soothing foods or those that don’t require any work. These are often high in sugar and low in nutrition. You may feel worse after eating the foods, perpetuating the circle of worsening diet and mental health.</li>
+        <br>
+        <li>A 2019 study found that when people who have mental health challenges increase their fruit and vegetable intake, it reduces their symptoms</li>
+        <br>
+        <li>Another study in 2022 looked at the effects of the Mediterranean diet on those with severe depression. In this 12-month randomized, controlled trial, the intervention group (those on the diet) saw a large 20.6-point reduction in depression symptoms on the Beck Depression scale. A 6.2-point reduction was observed in the control group (not on the diet).</li>
+        <br>
+        <li>The Mediterranean diet is built around a variety of whole foods rich in fiber, vegetables, fruits, legumes, healthy fats, and fish. It includes very minimal, if any, ultra-processed food.</li>
+        <br>
+        <li>While this diet has gained popularity, many diets around the world apply similar principles of eating a diet filled with a variety of whole foods and very few ultra-processed foods.</li>
+    
+        <script>
+            function calculateBMI() {
+                const weight = parseFloat(document.getElementById('weight').value);
+                const height = parseFloat(document.getElementById('height').value);
+                if (weight && height) {
+                    const bmi = (weight / (height * height)).toFixed(2);
+                    let category;
+                    if (bmi < 18.5) {
+                        category = "Underweight";
+                    } else if (bmi >= 18.5 && bmi < 24.9) {
+                        category = "Normal weight";
+                    } else if (bmi >= 25 && bmi < 29.9) {
+                        category = "Overweight";
+                    } else {
+                        category = "Obesity";
+                    }
+                    document.getElementById('bmi-result').innerHTML = `Your BMI is <b>${bmi}</b> (${category}).`;
+                } else {
+                    document.getElementById('bmi-result').innerHTML = "Please enter valid weight and height.";
+                }
             }
-        }
-
-        window.onscroll = function() {
-            var header = document.getElementById("header");
-            if (window.scrollY > 50) {
-                header.classList.add("scrolled");
-            } else {
-                header.classList.remove("scrolled");
-            }
-        };
-    </script>
+        </script>
 </body>
 </html>
